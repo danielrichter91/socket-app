@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+  <body>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Experience Centre</h1>
+                <h2 class="subtitle">Community Wall</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h1>Active</h1>
+            <div class='tags' id='people'></div>
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <form action="">
+                        <div class="field">
+                            <label class="label">Messages</label>
+                            <div class="control">
+                                <input id='message' class="input" type="text" placeholder="Say hi..." autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class='content'>
+                <h1>Messages</h1>
+                <ul id='messages'></ul>
+            </div>
+        </div>
+    </section>
+
+    <ul id="messages"></ul>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
